@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Trends</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="topleft">Student's Hub </div>
+            <div class="topright">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Community.html">Community</a></li>
+                    <li><a href="jobs.html">Job Trends</a></li>
+                    <li><a href="/">Resources</a></li>
+                    <li><a href="Account.html">Account</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="frontup">
+        <span class="p1">The Ultimate Job Trends!!
+    </div>
+
+  <div id="app">
+    <h1>Choose Your Career Path</h1>
+    <div id="user-selection">
+      <h2>Are you interested in?</h2>
+      <button onclick="setType('academics')">Academics</button>
+      <button onclick="setType('non-academics')">Non-Academics</button>
+    </div>
+
+    <div id="search-part" style="display: none;">
+      <h2>Search for a Discipline</h2>
+      <input type="text" id="search-input" placeholder="Type your discipline...">
+      <button onclick="searchDiscipline()">Search</button>
+    </div>
+
+    <div id="results" style="display: none;">
+      <h2>Search Results and Statistics</h2>
+      <div id="charts"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    let selectedType = '';
+
+    function setType(type) {
+      selectedType = type;
+      document.getElementById('user-selection').style.display = 'none';
+      document.getElementById('search-part').style.display = 'block';
+    }
+
+    async function searchDiscipline() {
+      const query = document.getElementById('search-input').value;
+      
+      // Here you would call your API to get real-time data for the query
+      const data = await fetchRealTimeData(query);
+      
+      document.getElementById('search-part').style.display = 'none';
+      document.getElementById('results').style.display = 'block';
+
+      displayCharts(data);
+    }
+
+    async function fetchRealTimeData(query) {
+      // Simulate an API call - replace with actual API integration
+      const response = await fetch(`https://api.example.com/disciplines?q=${query}`);
+      const data = await response.json();
+      return data;
+    }
+
+    function displayCharts(data) {
+      const ctx = document.createElement('canvas');
+      document.getElementById('charts').appendChild(ctx);
+
+      const labels = data.map(item => item.label);
+      const values = data.map(item => item.value);
+
+      new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: labels,
+          datasets: [{
+            data: values,
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+          }]
+        },
+        options: {
+          responsive: true
+        }
+      });
+    }
+  </script>
+
+
+</body>
+
+</html>

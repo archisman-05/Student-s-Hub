@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="topleft">Student's Hub </div>
+            <div class="topright">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Community.html">Community</a></li>
+                    <li><a href="jobs.html">Job Trends</a></li>
+                    <li><a href="/">Resources</a></li>
+                    <li><a href="Account.html">Account</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="fp">
+            <div class="leftp">
+                Hey, Students!
+            </div>
+            <div class="rightp">
+                Welcome To The<br>
+                <span id="element"></span>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Most Friendly', 'Most Insightful', 'Most Resourceful', 'Most Knowledgeable', 'Most Fun Community', 'Students Hub! :)'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script>
+        var typed = new Typed('#element2', {
+            strings: ['What Do We Offer?'],
+            typeSpeed: 50,
+        });
+    </script>
+    <script>
+        var typed = new Typed('#element1', {
+            strings: ['About Us'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>

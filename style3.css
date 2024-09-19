@@ -1,0 +1,138 @@
+body{
+    background-color: rgb(25, 25, 35);
+    font-family: Handjet, sans-serif;
+    color: rgb(20, 106, 152); 
+    background-image: url(img4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(131, 211, 78);
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 23px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(20, 106, 152);
+}
+nav ul li a:hover{
+    color:rgb(2, 10, 135);
+    font-size: 1.01rem;
+}
+.topleft{
+    font-size: 3rem;
+}
+.frontup{
+    display: flex;
+    justify-content: space-around;
+    margin: 200px 0;
+    height: 600px;
+}
+.p1{
+    font-size: 9rem;
+    color: #f39237;
+    margin: -30px 0;
+    text-align: center;
+}
+.p2{
+    color: rgb(202, 10, 202);
+}
+.b1{
+    border:0;
+    background-color: rgb(131, 211, 78);
+    height:1.2px;
+}
+.head{
+    text-align: center;
+    font-size: 45px;
+    padding: 30px;
+    color: rgb(202, 10, 202);
+}
+  /* Headings */
+  h1 {
+    font-size: 2em;
+    color: #931edc;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    color: #57df13;
+    margin-bottom: 15px;
+  }
+  #app {
+    padding-left: 800px;
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(136, 136, 251);
+  }
+  button:focus {
+    outline: none;
+  }
+  
+  /* Input Field */
+  #search-input {
+    padding-left: 10px;
+    width: 70%;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid blue;
+    box-shadow: 0 0 20px greenyellow;
+    transition: box-shadow 0.3s;
+  }
+  
+  #search-input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Results Area */
+  #results {
+    margin-top: 30px;
+  }
+  
+  #charts canvas {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+  
+    button {
+      width: 60%;
+      margin: 10px 0;
+    }
+  
+    #search-input {
+      width: 100%;
+    }
+
+  
